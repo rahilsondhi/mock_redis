@@ -365,7 +365,7 @@ class MockRedis
     end
 
     def can_incr?(value)
-      value.nil? || looks_like_integer?(value)
+      value.nil? || looks_like_integer?(value.to_s)
     end
 
     def extract_timeout(arglist)
